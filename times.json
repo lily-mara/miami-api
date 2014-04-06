@@ -3,35 +3,35 @@
 	{
 		"Pulley":
 		{
-			"Monday": [(open1, close1), (open2, close2)],
-			"Tuesday": [(open1, close1), (open2, close2)],
-			"Wednesday": [(open1, close1), (open2, close2)],
-			"Thursday": [(open1, close1), (open2, close2)],
-			"Friday": [(open1, close1), (open2, close2)],
-			"Saturday": [(open1, close1), (open2, close2)],
-			"Sunday": [(open1, close1), (open2, close2)]
+			"Monday": [[open1, close1], [open2, close2]],
+			"Tuesday": [[open1, close1], [open2, close2]],
+			"Wednesday": [[open1, close1], [open2, close2]],
+			"Thursday": [[open1, close1], [open2, close2]],
+			"Friday": [[open1, close1], [open2, close2]],
+			"Saturday": [[open1, close1], [open2, close2]],
+			"Sunday": [[open1, close1], [open2, close2]]
 		},
 
 		"Mein Street":
 		{
-			"Monday": [(open1, close1), (open2, close2)],
-			"Tuesday": [(open1, close1), (open2, close2)],
-			"Wednesday": [(open1, close1), (open2, close2)],
-			"Thursday": [(open1, close1), (open2, close2)],
-			"Friday": [(open1, close1), (open2, close2)],
-			"Saturday": [(open1, close1), (open2, close2)],
-			"Sunday": [(open1, close1), (open2, close2)]
+			"Monday": [[open1, close1], [open2, close2]],
+			"Tuesday": [[open1, close1], [open2, close2]],
+			"Wednesday": [[open1, close1], [open2, close2]],
+			"Thursday": [[open1, close1], [open2, close2]],
+			"Friday": [[open1, close1], [open2, close2]],
+			"Saturday": [[open1, close1], [open2, close2]],
+			"Sunday": [[open1, close1], [open2, close2]]
 		},
 
 		"Haines Boulangrene":
 		{
-			"Monday": [(open1, close1), (open2, close2)],
-			"Tuesday": [(open1, close1), (open2, close2)],
-			"Wednesday": [(open1, close1), (open2, close2)],
-			"Thursday": [(open1, close1), (open2, close2)],
-			"Friday": [(open1, close1), (open2, close2)],
-			"Saturday": [(open1, close1), (open2, close2)],
-			"Sunday": [(open1, close1), (open2, close2)]
+			"Monday": [[open1, close1], [open2, close2]],
+			"Tuesday": [[open1, close1], [open2, close2]],
+			"Wednesday": [[open1, close1], [open2, close2]],
+			"Thursday": [[open1, close1], [open2, close2]],
+			"Friday": [[open1, close1], [open2, close2]],
+			"Saturday": [[open1, close1], [open2, close2]],
+			"Sunday": [[open1, close1], [open2, close2]]
 		},
 
 		...
