@@ -24,6 +24,7 @@ class TodayHoursHandler(tornado.web.RequestHandler):
 class UpdateHandler(tornado.web.RequestHandler):
 	def post(self):
 		subprocess.call(['git', 'pull', 'origin', 'master'])
+		self.write('Update completed sucessfully')
 
 application = tornado.web.Application([
 	(r'/miami/open', OpenLocationHandler),
