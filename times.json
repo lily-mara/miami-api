@@ -3,277 +3,347 @@
 	"alexander":
 	{
 		"name": "Alexander Hall",
-		"m,t,w,h,f": [["0730", "1030"], ["1100", "1400"], ["1700", "1900"]],
-		"s,u": [["1100", "1400"], ["1700", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 1030], [1100, 1400], [1700, 1900]],
+			"s,u": [[1100, 1400], [1700, 1900]]
+		}
 	},
 
 	"americas":
 	{
 		"name": "Americas",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["1100", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[1100, 1900]]
+		}
 	},
 
 	"bell_tower":
 	{
 		"name": "Bell Tower Place",
-		"m,t,w,h,f": [["0800", "2000"]],
-		"s,u": [["1100", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[800, 2000]],
+			"s,u": [[1100, 1900]]
+		}
 	},
 
 	"delish":
 	{
 		"name": "Delish",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["1100", "2000"]]
+		"hours": {
+			"m,t,w,h,f": [[1100, 2000]]
+		}
 	},
 
 	"dividends":
 	{
 		"name": "Dividends",
 		"location": "Farmer School of Business",
-		"m,t,w,h": [["0745", "1600"]],
-		"f": [["0745", "1430"]]
+		"hours": {
+			"m,t,w,h": [[745, 1600]],
+			"f": [[745, 1430]]
+		}
 	},
 
 	"eastside":
 	{
 		"name": "Eastside Market",
 		"location": "UNKNOWN",
-		"m,t,w,h": [["0800", "2200"]],
-		"f": [["0800", "1900"]],
-		"s": [["1030", "1900"]],
-		"u": [["1030", "2200"]]
+		"hours": {
+			"m,t,w,h": [[800, 2200]],
+			"f": [[800, 1900]],
+			"s": [[1030, 1900]],
+			"u": [[1030, 2200]]
+		}
 	},
 
 	"encounter":
 	{
 		"name": "Encounter",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["1100", "2100"]]
+		"hours": {
+			"m,t,w,h,f": [[1100, 2100]]
+		}
 	},
 
 	"erickson":
 	{
 		"name": "Erickson Hall",
-		"m,t,w,h,f": [["0730", "1030"], ["1100", "1400"], ["1700", "1900"]],
-		"s,u": [["1100", "1400"], ["1700", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 1030], [1100, 1400], [1700, 1900]],
+			"s,u": [[1100, 1400], [1700, 1900]]
+		}
 	},
 
 	"first_stop":
 	{
 		"name": "First Stop",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["0700", "2100"]],
-		"s,u": [["1000", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[700, 2100]],
+			"s,u": [[1000, 1900]]
+		}
 	},
 
 	"haines_boulangerie":
 	{
 		"name": "Haines' Boulangerie",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f": [["0730", "2100"]],
-		"s,u": [["0800", "2000"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 2100]],
+			"s,u": [[800, 2000]]
+		}
 	},
 
 	"harris":
 	{
 		"name": "Harris Hall",
-		"m,t,w,h,f": [["0730", "1030"], ["1100", "1400"], ["1700", "1900"]],
-		"s,u": [["1100", "1400"], ["1700", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 1030], [1100, 1400], [1700, 1900]],
+			"s,u": [[1100, 1400], [1700, 1900]]
+		}
 	},
 
 	"hawks_nest":
 	{
 		"name": "Hawk's Nest",
 		"location": "UNKNOWN",
-		"m,t,w,h,u": [["1200", "2200"]]
+		"hours": {
+			"m,t,w,h,u": [[1200, 2200]]
+		}
 	},
 
 	"king_cafe":
 	{
 		"name": "King Cafe",
 		"location": "King Library",
-		"m,t,w,h": [["0700", "2300"]],
-		"f": [["0700", "1700"]],
-		"s": [["1100", "1500"]],
-		"u": [["1000", "2300"]]
+		"hours": {
+			"m,t,w,h": [[700, 2300]],
+			"f": [[700, 1700]],
+			"s": [[1100, 1500]],
+			"u": [[1000, 2300]]
+		}
 	},
 
 	"la_mia_cucina":
 	{
 		"name": "La Mia Cucina",
 		"location": "Harris Hall",
-		"m,t,w,h,f": [["1400", "2200"]],
-		"u": [["1630", "2200"]]
+		"hours": {
+			"m,t,w,h,f": [[1400, 2200]],
+			"u": [[1630, 2200]]
+		}
 	},
 
 	"m_emporium":
 	{
 		"name": "M Emporium",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f,s,u": [["0700", "2200"]]
+		"hours": {
+			"m,t,w,h,f,s,u": [[700, 2200]]
+		}
 	},
 
 	"market_street":
 	{
 		"name": "Market Street",
 		"location": "MacCracken Hall",
-		"m,t,w,h,f": [["0830", "2300"]],
-		"s,u": [["1030", "2300"]]
+		"hours": {
+			"m,t,w,h,f": [[830, 2300]],
+			"s,u": [[1030, 2300]]
+		}
 	},
 
 	"martin":
 	{
 		"name": "Martin Hall",
-		"m,t,w,h,f": [["0800", "1030"], ["1100", "1400"], ["1700", "1900"]],
-		"s,u": [["1100", "1400"], ["1700", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[800, 1030], [1100, 1400], [1700, 1900]],
+			"s,u": [[1100, 1400], [1700, 1900]]
+		}
 	},
 
 	"mein_street":
 	{
 		"name": "Mein Street Mongolian Grill",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f": [["0730", "1030"], ["1100", "2100"]],
-		"s,u": [["1100", "2100"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 1030], [1100, 2100]],
+			"s,u": [[1100, 2100]]
+		}
 	},
 
 	"miami_ice":
 	{
 		"name": "Miami Ice",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f": [["0700", "2200"]],
-		"s,u": [["0800", "2200"]]
+		"hours": {
+			"m,t,w,h,f": [[700, 2200]],
+			"s,u": [[800, 2200]]
+		}
 	},
 
 	"one_eight_09":
 	{
 		"name": "One Eight 09",
 		"location": "Shriver Center",
-		"u": [["1030", "1400"]]
+		"hours": {
+			"u": [[1030, 1400]]
+		}
 	},
 
 	"pacific_rim":
 	{
 		"name": "Pacific Rim",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["1100", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[1100, 1900]]
+		}
 	},
 
 	"patisserie":
 	{
 		"name": "Patisserie",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["0700", "2200"]],
-		"s,u": [["0900", "1600"]]
+		"hours": {
+			"m,t,w,h,f": [[700, 2200]],
+			"s,u": [[900, 1600]]
+		}
 	},
 
 	"pulley":
 	{
 		"name": "Pulley Diner",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f,s,u": [["0000", "2359"]]
+		"hours": {
+			"m,t,w,h,f,s,u": [[0, 2359]]
+		}
 	},
 
 	"red_brick":
 	{
 		"name": "Red Brick Pizza",
 		"location": "Maplestreet",
-		"m,t,w,h,f": [["1100", "2000"]],
-		"s,u": [["1100", "1700"]]
+		"hours": {
+			"m,t,w,h,f": [[1100, 2000]],
+			"s,u": [[1100, 1700]]
+		}
 	},
 
 	"serrano":
 	{
 		"name": "Serrano",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f,s,u": [["1100", "2200"]]
+		"hours": {
+			"m,t,w,h,f,s,u": [[1100, 2200]]
+		}
 	},
 
 	"spring_street":
 	{
 		"name": "Spring Street Market",
 		"location": "Shriver Center",
-		"m,t,w,h": [["0830", "1900"]],
-		"f": [["0900", "1700"]],
-		"s": [["1200", "1700"]]
+		"hours": {
+			"m,t,w,h": [[830, 1900]],
+			"f": [[900, 1700]],
+			"s": [[1200, 1700]]
+		}
 	},
 
 	"sundial":
 	{
 		"name": "Sundial Pizza Company",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f,s,u": [["1100", "2200"]]
+		"hours": {
+			"m,t,w,h,f,s,u": [[1100, 2200]]
+		}
 	},
 
 	"sundial_delivery":
 	{
 		"name": "Sundial Pizza Company - Delivery",
 		"location": "Armstrong Student Center",
-		"m,t,w,h,f,s": [["1700", "2359"]],
-		"u": [["1500", "2359"]]
+		"hours": {
+			"m,t,w,h,f,s": [[1700, 2359]],
+			"u": [[1500, 2359]]
+		}
 	},
 
 	"greystone":
 	{
 		"name": "The Greystone",
 		"location": "Erickson Hall",
-		"m,t,w,h": [["0900", "2200"]],
-		"f": [["0900", "1930"]],
-		"s": [["1030", "1930"]],
-		"u": [["1030", "2200"]]
+		"hours": {
+			"m,t,w,h": [[900, 2200]],
+			"f": [[900, 1930]],
+			"s": [[1030, 1930]],
+			"u": [[1030, 2200]]
+		}
 	},
 
 	"scoreboard":
 	{
 		"name": "The Scoreboard Market",
 		"location": "UNKNOWN",
-		"m,t,w,h,f,s,u": [["1000", "2200"]]
+		"hours": {
+			"m,t,w,h,f,s,u": [[1000, 2200]]
+		}
 	},
 
 	"tower_to_go":
 	{
 		"name": "Tower To Go",
 		"location": "Bell Tower Place",
-		"w": [["2000", "2359"]],
-		"h,f": [["0000", "0400"], ["2000", "2359"]],
-		"s": [["1900", "2359"]],
-		"u": [["0000", "0400"], ["1900", "2359"]],
-		"m": [["0000", "0400"]]
+		"hours": {
+			"w": [[2000, 2359]],
+			"h,f": [[0, 400], [2000, 2359]],
+			"s": [[1900, 2359]],
+			"u": [[0, 400], [1900, 2359]],
+			"m": [[0, 400]]
+		}
 	},
 
 	"tuffys":
 	{
 		"name": "Tuffy's",
 		"location": "Shriver Center",
-		"m,t,w,h": [["0830", "1900"]],
-		"f": [["0900", "1700"]],
-		"s": [["1200", "1700"]]
+		"hours": {
+			"m,t,w,h": [[830, 1900]],
+			"f": [[900, 1700]],
+			"s": [[1200, 1700]]
+		}
 	},
 
 	"western_dining_commons":
 	{
 		"name": "Western Dining Commons",
-		"m,t,w,h,f": [["0730", "1030"], ["1100", "1400"], ["1700", "1900"]],
-		"s,u": [["1100", "1400"], ["1700", "1900"]]
+		"hours": {
+			"m,t,w,h,f": [[730, 1030], [1100, 1400], [1700, 1900]],
+			"s,u": [[1100, 1400], [1700, 1900]]
+		}
 	},
 
 	"western_tea_hive":
 	{
 		"name": "Western Tea Hive",
-		"m,t,w,h": [["0730", "2100"]],
-		"f": [["0730", "1900"]],
-		"s": [["1030", "1900"]],
-		"u": [["1030", "2100"]]
+		"hours": {
+			"m,t,w,h": [[730, 2100]],
+			"f": [[730, 1900]],
+			"s": [[1030, 1900]],
+			"u": [[1030, 2100]]
+		}
 	},
 
 	"western_greystone":
 	{
 		"name": "Western The Greystone",
-		"m,t,w,h": [["0900", "2200"]],
-		"f": [["0900", "1930"]],
-		"s": [["1030", "1930"]],
-		"u": [["1030", "2200"]]
+		"hours": {
+			"m,t,w,h": [[900, 2200]],
+			"f": [[900, 1930]],
+			"s": [[1030, 1930]],
+			"u": [[1030, 2200]]
+		}
 	}
 
 }
