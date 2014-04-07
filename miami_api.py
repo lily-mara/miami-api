@@ -32,10 +32,11 @@ def get_open():
 	open = []
 	for location in locations:
 		hours = get_hours(location)
+		name = locations[location]['name']
 		if hours is not None:
-			for start, stop in hours:
+			for start, stop in hours[name]:
 				if inside_time_range(start, stop):
-					open.append([locations[location]['name'], (start, stop)])
+					open.append([name, (start, stop)])
 	return open
 
 def get_weekday():
@@ -52,7 +53,7 @@ def get_hours(location):
 	for i in location['hours']:
 		if today in i:
 			hours = location['hours'][i]
-			return hours
+			return {location['name']: hours}
 
 
 def get_hour_string(hours):
@@ -76,3 +77,5 @@ def get_today_hours():
 
 if __name__ == '__main__':
 	main()
+elif __name__ == 'miami_api':
+	get_json_data()
