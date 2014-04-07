@@ -1,3 +1,9 @@
+import json
+
+times = None
+with open('times.json', 'r') as json_file:
+	times = json.load(json_file)
+
 def get_open():
 	"""
 	returns: list of currently open dining locations
