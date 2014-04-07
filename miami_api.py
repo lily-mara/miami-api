@@ -1,10 +1,12 @@
 import json
 import time
 
+times = None
+weekdays = None
 
 def main():
 	get_json_data()
-	print(get_hours('harris'))
+	print(get_open())
 
 
 def inside_time_range(start, stop):
@@ -31,8 +33,14 @@ def get_open():
 	"""
 	returns: list of currently open dining locations
 	"""
-	pass
-
+	open = []
+	for location in times:
+		hours = get_hours(location)
+		if hours is not None:
+			for start, stop in hours:
+				if inside_time_range(start, stop):
+					open.append(times[location]['name'])
+	return open
 
 def get_weekday():
 	return weekdays[time.strftime('%w')]
