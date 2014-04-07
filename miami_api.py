@@ -35,7 +35,7 @@ def get_open():
 		if hours is not None:
 			for start, stop in hours:
 				if inside_time_range(start, stop):
-					open.append(locations[location]['name'])
+					open.append([locations[location]['name'], (start, stop)])
 	return open
 
 def get_weekday():
