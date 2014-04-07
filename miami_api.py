@@ -10,8 +10,8 @@ def main():
 
 def inside_time_range(start, stop):
 	"""
-	Takes two ints, start and stop locations in 24-h style time, returns True if it
-	is currently within that time range, false otherwise
+	Takes two ints, start and stop locations in 24-h style time, returns True
+	if it is currently within that time range, false otherwise
 
 	returns: True or False if it is currently inside of the given time range
 	"""
