@@ -21,9 +21,9 @@ class TodayHoursHandler(tornado.web.RequestHandler):
 		self.write(response)
 
 application = tornado.web.Application([
-	(r'/open', OpenLocationHandler),
-	(r'/hours/([a-zA-Z]+)', HoursHandler),
-	(r'/today', TodayHoursHandler)
+	(r'/miami/open', OpenLocationHandler),
+	(r'/miami/hours/([a-zA-Z]+)', HoursHandler),
+	(r'/miami/today', TodayHoursHandler)
 ])
 
 if __name__ == '__main__':
