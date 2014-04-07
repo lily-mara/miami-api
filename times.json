@@ -136,6 +136,82 @@
 		"location": "Armstrong",
 		"m,t,w,h,f": [[0730, 1030], [1100, 2100]],
 		"s,u": [[1100, 2100]]
+	},
+
+	"miami_ice":
+	{
+		"name": "Miami Ice",
+		"location": "Armstrong",
+		"m,t,w,h,f": [[0700, 2200]],
+		"s,u": [[0800, 2200]]
+	},
+
+	"one_eight_09":
+	{
+		"name": "One Eight 09",
+		"location": "Shriver",
+		"u": [[1030, 1400]]
+	},
+
+	"pacific_rim":
+	{
+		"name": "Pacific Rim",
+		"location": "Maplestreet",
+		"m,t,w,h,f": [[1100, 1900]]
+	},
+
+	"patisserie":
+	{
+		"name": "Patisserie",
+		"location": "Maplestreet",
+		"m,t,w,h,f": [[0700, 2200]],
+		"s,u": [[0900, 1600]]
+	},
+
+	"pulley":
+	{
+		"name": "Pulley Diner",
+		"location": "Armstrong",
+		"m,t,w,h,f,s,u": [[0000, 2359]]
+	},
+
+	"red_brick":
+	{
+		"name": "Red Brick Pizza",
+		"location": "Maplestreet",
+		"m,t,w,h,f": [[1100, 2000]],
+		"s,u": [[1100, 1700]]
+	},
+
+	"serrano":
+	{
+		"name": "Serrano",
+		"location": "Armstrong",
+		"m,t,w,h,f,s,u": [[1100, 2200]]
+	},
+
+	"spring_street":
+	{
+		"name": "Spring Street Market",
+		"location": "Shriver",
+		"m,t,w,h": [[0830, 1900]],
+		"f": [[0900, 1700]],
+		"s": [[1200, 1700]]
+	},
+
+	"sundial":
+	{
+		"name": "Sundial Pizza Company",
+		"location": "Armstrong",
+		"m,t,w,h,f,s,u": [[1100, 2200]]
+	},
+
+	"sundial_delivery":
+	{
+		"name": "Sundial Pizza Company - Delivery",
+		"location": "Armstrong",
+		"m,t,w,h,f,s": [[1700, 2359]],
+		"u": [[1500, 2359]]
 	}
 
 }
