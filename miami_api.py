@@ -3,6 +3,7 @@ import time
 
 locations = None
 
+
 def main():
 	get_json_data()
 	print(get_open())
@@ -18,6 +19,7 @@ def inside_time_range(start, stop):
 
 	now = int(time.strftime('%H%M'))
 	return start < now < stop
+
 
 def get_json_data():
 	global locations
@@ -38,9 +40,11 @@ def get_open():
 					open.append([locations[location]['name'], (start, stop)])
 	return open
 
+
 def get_weekday():
 	weekdays = ["u", "m", "t", "w", "h", "f", "s"]
 	return weekdays[int(time.strftime('%w'))]
+
 
 def get_hours(location):
 	"""
