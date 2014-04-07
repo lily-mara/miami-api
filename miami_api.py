@@ -47,7 +47,10 @@ def get_hours(location):
 	"""
 	returns: list of hours for given location on current weekday
 	"""
-	location = locations[location]
+	try:
+		location = locations[location]
+	except KeyError:
+		return {location: 'Not Found'}
 	today = get_weekday()
 
 	for i in location['hours']:
