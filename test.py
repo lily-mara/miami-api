@@ -11,6 +11,16 @@ def main():
 	#returns hours for all dining locations open today
 	get_today_hours()
 
+	try:
+		import flask
+	except ImportError:
+		print('You do not have the required module \'flask\'.')
+		print('Please install it by running')
+		print()
+		print('pip install flask')
+		print()
+		input('Press ENTER to continue.')
+
 
 if __name__ == '__main__':
 	main()
