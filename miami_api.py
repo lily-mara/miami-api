@@ -70,7 +70,8 @@ def get_today_hours():
 	today_hours = {}
 	for location in locations:
 		hours = get_hours(location)
-		today_hours.update({locations[location]['name']: hours})
+		if hours is not None:
+			today_hours.update(hours)
 	return today_hours
 
 
