@@ -30,7 +30,7 @@ application = tornado.web.Application([
 	(r'/miami/open', OpenLocationHandler),
 	(r'/miami/hours/([a-zA-Z]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/upate', UpdateHandler)
+	(r'/miami/update', UpdateHandler)
 ])
 
 if __name__ == '__main__':
