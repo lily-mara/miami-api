@@ -46,6 +46,56 @@
 	{
 		"name": "Maplestreet Encounter",
 		"m,t,w,h,f": [[1100, 2100]]
+	},
+
+	"erickson":
+	{
+		"name": "Erickson Hall",
+		"m,t,w,h,f": [[0730, 1030], [1100, 1400], [1700, 1900]],
+		"s,u": [[1100, 1400], [1700, 1900]]
+	},
+
+	"first_stop":
+	{
+		"name": "Maplestreet First Stop",
+		"m,t,w,h,f": [[0700, 2100]],
+		"s,u": [[1000, 1900]],
+	},
+
+	"haines_boulangerie":
+	{
+		"name": "Armstrong Haines' Boulangerie",
+		"m,t,w,h,f": [[0730, 2100]],
+		"s,u": [[0800, 2000]]
+	},
+
+	"harris":
+	{
+		"name": "Harris Hall",
+		"m,t,w,h,f": [[0730, 1030], [1100, 1400], [1700, 1900]],
+		"s,u": [[1100, 1400], [1700, 1900]]
+	},
+
+	"hawks_nest":
+	{
+		"name": "Hawk's Nest",
+		"m,t,w,h,u": [[1200, 2200]]
+	},
+
+	"king_cafe":
+	{
+		"name": "King Cafe",
+		"m,t,w,h": [[0700, 2300]],
+		"f": [[0700, 1700]],
+		"s": [[1100, 1500]],
+		"u": [[1000, 2300]]
+	},
+
+	"la_mia_cucina":
+	{
+		"name": "La Mia Cucina",
+		"m,t,w,h,f": [[1400, 2200]],
+		"u": [[1630, 2200]]
 	}
 
 }
