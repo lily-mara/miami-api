@@ -28,7 +28,7 @@ class UpdateHandler(tornado.web.RequestHandler):
 
 application = tornado.web.Application([
 	(r'/miami/open', OpenLocationHandler),
-	(r'/miami/hours/([a-zA-Z]+)', HoursHandler),
+	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
 	(r'/miami/update', UpdateHandler)
 ])
