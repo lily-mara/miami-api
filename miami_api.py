@@ -6,7 +6,7 @@ weekdays = None
 
 def main():
 	get_json_data()
-	print(get_open())
+	print(get_today_hours())
 
 
 def inside_time_range(start, stop):
@@ -71,7 +71,12 @@ def get_today_hours():
 	returns: JSON data containing hours of every open dining location on
 		current weekday
 	"""
-	pass
+	today_hours = {}
+	for location in times:
+		hours = get_hours(location)
+		today_hours.update({times[location]['name']: hours})
+	return today_hours
+
 
 if __name__ == '__main__':
 	main()
