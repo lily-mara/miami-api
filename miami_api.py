@@ -13,7 +13,7 @@ def inside_time_range(start, stop):
 	"""
 
 	now = int(time.strftime('%H%M'))
-	return start < now < stop
+	return start <= now <= stop
 
 
 def get_json_data():
