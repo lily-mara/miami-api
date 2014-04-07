@@ -21,16 +21,20 @@ class TodayHoursHandler(tornado.web.RequestHandler):
 		response = miami_api.get_today_hours()
 		self.write(response)
 
-class UpdateHandler(tornado.web.RequestHandler):
+class GithubHookHandler(tornado.web.RequestHandler):
 	def post(self):
 		subprocess.call(['git', 'pull', 'origin', 'master'])
+		print('updating...')
 		self.write('Update completed sucessfully')
+
+	def get(self):
+		self.write('update?')
 
 application = tornado.web.Application([
 	(r'/miami/open', OpenLocationHandler),
 	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/update', UpdateHandler)
+	(r'/miami/update', GithubHookHandler)
 ])
 
 if __name__ == '__main__':
