@@ -35,7 +35,7 @@ def get_open():
 			for start, stop in hours[name]:
 				if inside_time_range(start, stop):
 					open.append([name, (start, stop)])
-	return open
+	return dict(open)
 
 
 def get_weekday():

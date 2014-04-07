@@ -4,20 +4,20 @@ import tornado.ioloop
 import tornado.web
 
 import miami_api
- 
+
 class OpenLocationHandler(tornado.web.RequestHandler):
 	def get(self):
-		response = dict(miami_api.get_open())
+		response = miami_api.get_open()
 		self.write(response)
 
 class HoursHandler(tornado.web.RequestHandler):
 	def get(self, location):
-		response = dict(miami_api.get_hours(location))
+		response = miami_api.get_hours(location)
 		self.write(response)
 
 class TodayHoursHandler(tornado.web.RequestHandler):
 	def get(self):
-		response = dict(miami_api.get_today_hours())
+		response = miami_api.get_today_hours()
 		self.write(response)
 
 application = tornado.web.Application([
