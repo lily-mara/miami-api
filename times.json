@@ -39,7 +39,7 @@
 	"eastside":
 	{
 		"name": "Eastside Market",
-		"location": "UNKOWN",
+		"location": "UNKNOWN",
 		"m,t,w,h": [[0800, 2200]],
 		"f": [[0800, 1900]],
 		"s": [[1030, 1900]],
@@ -86,7 +86,7 @@
 	"hawks_nest":
 	{
 		"name": "Hawk's Nest",
-		"location": "UNKOWN",
+		"location": "UNKNOWN",
 		"m,t,w,h,u": [[1200, 2200]]
 	},
 
@@ -227,7 +227,7 @@
 	"scoreboard":
 	{
 		"name": "The Scoreboard Market",
-		"location": "UNKOWN",
+		"location": "UNKNOWN",
 		"m,t,w,h,f,s,u": [[1000, 2200]]
 	},
 
