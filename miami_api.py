@@ -2,7 +2,6 @@ import json
 import time
 
 locations = None
-weekdays = None
 
 def main():
 	get_json_data()
@@ -22,11 +21,8 @@ def inside_time_range(start, stop):
 
 def get_json_data():
 	global locations
-	global weekdays
 	with open('locations.json', 'r') as json_file:
 		locations = json.load(json_file)
-	with open('weekdays.json', 'r') as json_file:
-		weekdays = json.load(json_file)
 
 
 def get_open():
@@ -43,7 +39,8 @@ def get_open():
 	return open
 
 def get_weekday():
-	return weekdays[time.strftime('%w')]
+	weekdays = ["u", "m", "t", "w", "h", "f", "s"]
+	return weekdays[int(time.strftime('%w'))]
 
 def get_hours(location):
 	"""
@@ -68,8 +65,7 @@ def get_hour_string(hours):
 
 def get_today_hours():
 	"""
-	returns: JSON data containing hours of every open dining location on
-		current weekday
+	returns: hours of every open dining location on current weekday
 	"""
 	today_hours = {}
 	for location in locations:
