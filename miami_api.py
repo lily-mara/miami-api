@@ -1,17 +1,17 @@
 import json
 import time
 
-times = None
+locations = None
 weekdays = None
 
 def main():
 	get_json_data()
-	print(get_today_hours())
+	print(get_open())
 
 
 def inside_time_range(start, stop):
 	"""
-	Takes two ints, start and stop times in 24-h style time, returns True if it
+	Takes two ints, start and stop locations in 24-h style time, returns True if it
 	is currently within that time range, false otherwise
 
 	returns: True or False if it is currently inside of the given time range
@@ -21,10 +21,10 @@ def inside_time_range(start, stop):
 	return start < now < stop
 
 def get_json_data():
-	global times
+	global locations
 	global weekdays
-	with open('times.json', 'r') as json_file:
-		times = json.load(json_file)
+	with open('locations.json', 'r') as json_file:
+		locations = json.load(json_file)
 	with open('weekdays.json', 'r') as json_file:
 		weekdays = json.load(json_file)
 
@@ -34,12 +34,12 @@ def get_open():
 	returns: list of currently open dining locations
 	"""
 	open = []
-	for location in times:
+	for location in locations:
 		hours = get_hours(location)
 		if hours is not None:
 			for start, stop in hours:
 				if inside_time_range(start, stop):
-					open.append(times[location]['name'])
+					open.append(locations[location]['name'])
 	return open
 
 def get_weekday():
@@ -49,7 +49,7 @@ def get_hours(location):
 	"""
 	returns: list of hours for given location on current weekday
 	"""
-	location = times[location]
+	location = locations[location]
 	today = get_weekday()
 
 	for i in location['hours']:
@@ -72,9 +72,9 @@ def get_today_hours():
 		current weekday
 	"""
 	today_hours = {}
-	for location in times:
+	for location in locations:
 		hours = get_hours(location)
-		today_hours.update({times[location]['name']: hours})
+		today_hours.update({locations[location]['name']: hours})
 	return today_hours
 
 
