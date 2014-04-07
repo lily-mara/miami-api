@@ -1,44 +1,51 @@
 {
-	"Armstrong":
+
+	"alexander":
 	{
-		"Pulley":
-		{
-			"Monday": [[open1, close1], [open2, close2]],
-			"Tuesday": [[open1, close1], [open2, close2]],
-			"Wednesday": [[open1, close1], [open2, close2]],
-			"Thursday": [[open1, close1], [open2, close2]],
-			"Friday": [[open1, close1], [open2, close2]],
-			"Saturday": [[open1, close1], [open2, close2]],
-			"Sunday": [[open1, close1], [open2, close2]]
-		},
-
-		"Mein Street":
-		{
-			"Monday": [[open1, close1], [open2, close2]],
-			"Tuesday": [[open1, close1], [open2, close2]],
-			"Wednesday": [[open1, close1], [open2, close2]],
-			"Thursday": [[open1, close1], [open2, close2]],
-			"Friday": [[open1, close1], [open2, close2]],
-			"Saturday": [[open1, close1], [open2, close2]],
-			"Sunday": [[open1, close1], [open2, close2]]
-		},
-
-		"Haines Boulangrene":
-		{
-			"Monday": [[open1, close1], [open2, close2]],
-			"Tuesday": [[open1, close1], [open2, close2]],
-			"Wednesday": [[open1, close1], [open2, close2]],
-			"Thursday": [[open1, close1], [open2, close2]],
-			"Friday": [[open1, close1], [open2, close2]],
-			"Saturday": [[open1, close1], [open2, close2]],
-			"Sunday": [[open1, close1], [open2, close2]]
-		},
-
-		...
+		"name": "Alexander Hall",
+		"m,t,w,h,f": [[0730, 1030], [1100, 1400], [1700, 1900]],
+		"s,u": [[1100, 1400], [1700, 1900]]
 	},
 
-	"Maplestreet Station":
-	{...},
+	"americas":
+	{
+		"name": "Maplestreet Americas",
+		"m,t,w,h,f": [[1100, 1900]]
+	},
 
-	...
+	"bell_tower":
+	{
+		"name": "Bell Tower Place",
+		"m,t,w,h,f": [[0800, 2000]],
+		"s,u": [[1100, 1900]]
+	},
+
+	"delish":
+	{
+		"name": "Maplestreet Delish",
+		"m,t,w,h,f": [[1100, 2000]]
+	}
+
+	"dividends":
+	{
+		"name": "Dividends",
+		"m,t,w,h": [[0745, 1600]],
+		"f": [[0745, 1430]]
+	},
+
+	"eastside":
+	{
+		"name": "Eastside Market",
+		"m,t,w,h": [[0800, 2200]],
+		"f": [[0800, 1900]],
+		"s": [[1030, 1900]],
+		"u": [[1030, 2200]]
+	},
+
+	"encounter":
+	{
+		"name": "Maplestreet Encounter",
+		"m,t,w,h,f": [[1100, 2100]]
+	},
+
 }
