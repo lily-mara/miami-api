@@ -24,7 +24,6 @@ class TodayHoursHandler(tornado.web.RequestHandler):
 class GithubHookHandler(tornado.web.RequestHandler):
 	def post(self):
 		subprocess.call(['git', 'pull', 'origin', 'master'])
-		print('updating...')
 		self.write('Update completed sucessfully')
 
 	def get(self):
