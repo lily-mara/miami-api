@@ -21,20 +21,10 @@ class TodayHoursHandler(tornado.web.RequestHandler):
 		response = miami_api.get_today_hours()
 		self.write(response)
 
-GitHub_POST_IPs = (
-	'207.97.227.253',
-	'50.57.128.197',
-	'127.0.0.1'
-)
-
 class GithubHookHandler(tornado.web.RequestHandler):
 	def post(self):
-		if self.request.remote_ip not in GitHub_POST_IPs:
-			self.send_error(status_code=403)
-			return
-
 		subprocess.call(['git', 'pull', 'origin', 'master'])
-		print('updating')
+		print('updating...')
 		self.write('Update completed sucessfully')
 
 	def get(self):
