@@ -1,20 +1,31 @@
 #!/usr/bin/env python3
-from flask import Flask, jsonify
+import tornado.escape
+import tornado.ioloop
+import tornado.web
+from flask import jsonify
 import miami_api
+ 
+class OpenLocationHandler(tornado.web.RequestHandler):
+	def get(self):
+		response = dict(miami_api.get_open())
+		self.write(response)
 
-app = Flask(__name__)
+class HoursHandler(tornado.web.RequestHandler):
+	def get(self, location):
+		response = dict(miami_api.get_hours(location))
+		self.write(response)
 
-@app.route('/miami/open', methods = ['GET'])
-def get_open():
-	return jsonify(miami_api.get_open())
+class TodayHoursHandler(tornado.web.RequestHandler):
+	def get(self):
+		response = dict(miami_api.get_today_hours())
+		self.write(response)
 
-@app.route('/miami/hours/<string:location>', methods = ['GET'])
-def get_hours(location):
-	return jsonify(miami_api.get_hours(location))
-
-@app.route('/miami/today', methods = ['GET'])
-def get_today_hours():
-	return jsonify(miami_api.get_today_hours())
+application = tornado.web.Application([
+	(r'/open', OpenLocationHandler),
+	(r'/hours/([a-zA-Z]+)', HoursHandler),
+	(r'/today', TodayHoursHandler)
+])
 
 if __name__ == '__main__':
-	app.run(debug = True)
+	application.listen(5000)
+	tornado.ioloop.IOLoop.instance().start()
