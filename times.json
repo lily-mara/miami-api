@@ -9,7 +9,8 @@
 
 	"americas":
 	{
-		"name": "Maplestreet Americas",
+		"name": "Americas",
+		"location": "Maplestreet",
 		"m,t,w,h,f": [[1100, 1900]]
 	},
 
@@ -22,13 +23,15 @@
 
 	"delish":
 	{
-		"name": "Maplestreet Delish",
+		"name": "Delish",
+		"location": "Maplestreet",
 		"m,t,w,h,f": [[1100, 2000]]
 	}
 
 	"dividends":
 	{
 		"name": "Dividends",
+		"location": "Farmer School of Business",
 		"m,t,w,h": [[0745, 1600]],
 		"f": [[0745, 1430]]
 	},
@@ -36,6 +39,7 @@
 	"eastside":
 	{
 		"name": "Eastside Market",
+		"location": "UNKOWN",
 		"m,t,w,h": [[0800, 2200]],
 		"f": [[0800, 1900]],
 		"s": [[1030, 1900]],
@@ -44,7 +48,8 @@
 
 	"encounter":
 	{
-		"name": "Maplestreet Encounter",
+		"name": "Encounter",
+		"location": "Maplestreet",
 		"m,t,w,h,f": [[1100, 2100]]
 	},
 
@@ -57,14 +62,16 @@
 
 	"first_stop":
 	{
-		"name": "Maplestreet First Stop",
+		"name": "First Stop",
+		"location": "Maplestreet",
 		"m,t,w,h,f": [[0700, 2100]],
 		"s,u": [[1000, 1900]],
 	},
 
 	"haines_boulangerie":
 	{
-		"name": "Armstrong Haines' Boulangerie",
+		"name": "Haines' Boulangerie",
+		"location": "Armstrong",
 		"m,t,w,h,f": [[0730, 2100]],
 		"s,u": [[0800, 2000]]
 	},
@@ -79,12 +86,14 @@
 	"hawks_nest":
 	{
 		"name": "Hawk's Nest",
+		"location": "UNKOWN",
 		"m,t,w,h,u": [[1200, 2200]]
 	},
 
 	"king_cafe":
 	{
 		"name": "King Cafe",
+		"location": "King Library",
 		"m,t,w,h": [[0700, 2300]],
 		"f": [[0700, 1700]],
 		"s": [[1100, 1500]],
@@ -94,8 +103,39 @@
 	"la_mia_cucina":
 	{
 		"name": "La Mia Cucina",
+		"location": "Harris Hall",
 		"m,t,w,h,f": [[1400, 2200]],
 		"u": [[1630, 2200]]
+	},
+
+	"m_emporium":
+	{
+		"name": "M Emporium",
+		"location": "Armstrong",
+		"m,t,w,h,f,s,u": [[0700, 2200]]
+	},
+
+	"market_street":
+	{
+		"name": "Market Street",
+		"location": "MacCracken Hall",
+		"m,t,w,h,f": [[0830, 2300]],
+		"s,u": [[1030, 2300]]
+	},
+
+	"martin":
+	{
+		"name": "Martin Hall",
+		"m,t,w,h,f": [[0800, 1030], [1100, 1400], [1700, 1900]],
+		"s,u": [[1100, 1400], [1700, 1900]]
+	},
+
+	"mein_street":
+	{
+		"name": "Mein Street Mongolian Grill",
+		"location": "Armstrong",
+		"m,t,w,h,f": [[0730, 1030], [1100, 2100]],
+		"s,u": [[1100, 2100]]
 	}
 
 }
