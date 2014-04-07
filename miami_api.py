@@ -4,11 +4,6 @@ import time
 locations = None
 
 
-def main():
-	get_json_data()
-	print(get_open())
-
-
 def inside_time_range(start, stop):
 	"""
 	Takes two ints, start and stop locations in 24-h style time, returns True
@@ -79,7 +74,5 @@ def get_today_hours():
 	return today_hours
 
 
-if __name__ == '__main__':
-	main()
-elif __name__ == 'miami_api':
+if __name__ == 'miami_api':
 	get_json_data()
