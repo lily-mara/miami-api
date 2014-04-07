@@ -212,6 +212,68 @@
 		"location": "Armstrong",
 		"m,t,w,h,f,s": [[1700, 2359]],
 		"u": [[1500, 2359]]
+	},
+
+	"greystone":
+	{
+		"name": "The Greystone",
+		"location": "Erickson Hall",
+		"m,t,w,h": [[0900, 2200]],
+		"f": [[0900, 1930]],
+		"s": [[1030, 1930]],
+		"u": [[1030, 2200]]
+	},
+
+	"scoreboard":
+	{
+		"name": "The Scoreboard Market",
+		"location": "UNKOWN",
+		"m,t,w,h,f,s,u": [[1000, 2200]]
+	},
+
+	"tower_to_go":
+	{
+		"name": "Tower To Go",
+		"location", "Bell Tower Place",
+		"w": [[2000, 2359]]
+		"h,f": [[0000, 0400], [2000, 2359]]
+		"s": [[1900, 2359]]
+		"u": [[0000, 0400], [1900, 2359]]
+		"m": [[0000, 0400]]
+	},
+
+	"tuffys":
+	{
+		"name": "Tuffy's",
+		"location": "Shriver",
+		"m,t,w,h": [[0830, 1900]],
+		"f": [[0900, 1700]],
+		"s": [[1200, 1700]]
+	},
+
+	"western_dining_commons":
+	{
+		"name": "Western Dining Commons",
+		"m,t,w,h,f": [[0730, 1030], [1100, 1400], [1700, 1900]],
+		"s,u": [[1100, 1400], [1700, 1900]]
+	},
+
+	"western_tea_hive":
+	{
+		"name": "Western Tea Hive",
+		"m,t,w,h": [[0730, 2100]],
+		"f": [[0730, 1900]],
+		"s": [[1030, 1900]],
+		"u": [[1030, 2100]]
+	},
+
+	"western_greystone":
+	{
+		"name": "Western The Greystone",
+		"m,t,w,h": [[0900, 2200]],
+		"f": [[0900, 1930]],
+		"s": [[1030, 1930]],
+		"u": [[1030, 2200]]
 	}
 
 }
