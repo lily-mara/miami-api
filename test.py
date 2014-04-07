@@ -13,12 +13,12 @@ def main():
 	get_today_hours()
 
 	try:
-		import flask
+		import tornado
 	except ImportError:
-		print('You do not have the required module \'flask\'.')
+		print('You do not have the required module \'tornado\'.')
 		print('Please install it by running')
 		print()
-		print('pip install flask')
+		print('pip install tornado')
 		print()
 		input('Press ENTER to continue.')
 
