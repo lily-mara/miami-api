@@ -17,4 +17,4 @@ def get_today_hours():
 	return jsonify(miami_api.get_today_hours())
 
 if __name__ == '__main__':
-    app.run(debug = True)
+	app.run(debug = True)
