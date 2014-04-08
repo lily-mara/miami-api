@@ -47,10 +47,10 @@ class MainHandler(tornado.web.RequestHandler):
 		self.render(filename)
 
 handlers = [
-	(r'/miami/open', OpenLocationHandler),
-	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
-	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/update', GithubHookHandler),
+	(r'/api/open', OpenLocationHandler),
+	(r'/api/hours/([a-zA-Z_]+)', HoursHandler),
+	(r'/api/today', TodayHoursHandler),
+	(r'/api/update', GithubHookHandler),
 	(r'/([a-z.A-Z_]+)', MainHandler),
 	(r'/', MainHandler)
 ]
