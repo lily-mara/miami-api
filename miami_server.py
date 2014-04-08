@@ -37,16 +37,26 @@ class GithubHookHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.write('update?')
 
+class MainHandler(tornado.web.RequestHandler):
+	def get(self, filename=None):
+		if filename is None:
+			self.render('index.html')
+			return
+		self.render(filename)
+
 handlers = [
 	(r'/miami/open', OpenLocationHandler),
 	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/update', GithubHookHandler)
+	(r'/miami/update', GithubHookHandler),
+	(r'/([a-z.A-Z_]+)', MainHandler),
+	(r'/', MainHandler)
 ]
 
 settings = {
 	'debug': True,
-	'static_path': os.path.join('static')
+	'static_path': os.path.join('static'),
+	'template_path': os.path.join('templates')
 	}
 
 application = tornado.web.Application(handlers, **settings)
