@@ -40,7 +40,8 @@ application = tornado.web.Application([
 	(r'/miami/open', OpenLocationHandler),
 	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/update', GithubHookHandler)
+	(r'/miami/update', GithubHookHandler),
+	(r'/favicon\.ico',tornado.web.StaticFileHandler, {'path': './images/favicon.ico'},)
 ])
 
 if __name__ == '__main__':
