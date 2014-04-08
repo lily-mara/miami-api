@@ -4,6 +4,7 @@ import tornado.ioloop
 import tornado.web
 import json
 import subprocess
+import os
 
 import miami_api
 
@@ -36,13 +37,19 @@ class GithubHookHandler(tornado.web.RequestHandler):
 	def get(self):
 		self.write('update?')
 
-application = tornado.web.Application([
+handlers = [
 	(r'/miami/open', OpenLocationHandler),
 	(r'/miami/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/miami/today', TodayHoursHandler),
-	(r'/miami/update', GithubHookHandler),
-	(r'/favicon\.ico',tornado.web.StaticFileHandler, {'path': './images/favicon.ico'},)
-])
+	(r'/miami/update', GithubHookHandler)
+]
+
+settings = {
+	'debug': True,
+	'static_path': os.path.join('static')
+	}
+
+application = tornado.web.Application(handlers, **settings)
 
 if __name__ == '__main__':
 	application.listen(5000)
