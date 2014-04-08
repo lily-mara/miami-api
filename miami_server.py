@@ -40,7 +40,8 @@ class GithubHookHandler(tornado.web.RequestHandler):
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, filename=None):
 		if filename is None:
-			self.render('index.html')
+			open_list = miami_api.get_open()
+			self.render('index.html', open_list=open_list)
 			return
 		self.render(filename)
 
