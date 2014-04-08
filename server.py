@@ -7,6 +7,7 @@ import subprocess
 import os
 
 import miami_api
+import html_functions
 
 class OpenLocationHandler(tornado.web.RequestHandler):
 	def get(self):
@@ -40,7 +41,7 @@ class GithubHookHandler(tornado.web.RequestHandler):
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, filename=None):
 		if filename is None:
-			open_list = miami_api.get_open()
+			open_list = html_functions.get_open_html()
 			self.render('index.html', open_list=open_list)
 			return
 		self.render(filename)
