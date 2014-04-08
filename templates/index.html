@@ -6,12 +6,17 @@
 {% end %}
 
 {% block content %}
-	<ul>
-	{% for location in open_list %}
-		<li> {{ location }} </li>
-		<ul>
-			<li> Open for {{ open_list[location] }} </li>
-		</ul>
+	<table>
+		<tr>
+			<th>Location</th>
+			<th>Time to close</th>
+		</tr>
+
+		{% for location in open_list %}
+		<tr>
+			<td> {{ location }} </td>
+			<td>{{ open_list[location] }} </td>
+		</tr>
 	{% end %}
-	</ul>
+	</table>
 {% end %}
