@@ -10,12 +10,14 @@
 		<tr>
 			<th>Location</th>
 			<th>Time to close</th>
+			<th>Close Time</th>
 		</tr>
 
 		{% for location in open_list %}
 		<tr>
-			<td> {{ location }} </td>
-			<td>{{ open_list[location] }} </td>
+			<td> {{ location['name'] }} </td>
+			<td>{{ location['to_close'] }} </td>
+			<td>{{ location['close_time'] }} </td>
 		</tr>
 	{% end %}
 	</table>

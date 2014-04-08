@@ -7,15 +7,20 @@ def main():
 
 
 def get_open_html():
-	return_dict = {}
+	return_list = []
 	open_dict = miami_api.get_open()
 	open_list = list(open_dict.items())
 
 	for location in open_list:
-		time_string = get_time_to_close(location[1][1])
-		return_dict.update({location[0]: time_string})
+		to_close = get_time_to_close(location[1][1])
+		close_time = format_time(location[1][1])
+		return_list.append({
+			'name': location[0],
+			'to_close' : to_close,
+			'close_time': close_time
+			})
 
-	return return_dict
+	return return_list
 
 
 def get_time_to_close(close):
@@ -31,6 +36,12 @@ def get_time_to_close(close):
 
 	difference_string = time.strftime('%Hh:%Mm', difference)
 	return difference_string
+
+
+def format_time(to_format):
+	in_time = time.strptime(str(to_format), '%H%M')
+	return time.strftime('%I:%M %p', in_time)
+
 
 if __name__ == '__main__':
 	main()
