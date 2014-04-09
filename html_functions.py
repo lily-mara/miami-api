@@ -32,7 +32,7 @@ def get_time_to_close(close):
 	close_epoch = time.mktime(close_time)
 	now_epoch = time.time()
 
-	difference = time.gmtime(close_epoch - now_epoch)
+	difference = time.gmtime(close_epoch - now_epoch + 60)
 
 	difference_string = time.strftime('%Hh:%Mm', difference)
 	return difference_string
