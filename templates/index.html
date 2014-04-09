@@ -14,7 +14,7 @@
 		</tr>
 
 		{% for location in open_list %}
-		<tr>
+		<tr style="{{location['color']}}">
 			<td> {{ location['name'] }} </td>
 			<td>{{ location['to_close'] }} </td>
 			<td>{{ location['close_time'] }} </td>
