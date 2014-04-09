@@ -50,12 +50,12 @@ def get_style(time_to_close):
 
 	if time_to_close < 60 * 60:
 		# Red for times less than one hour
-		return 'background:#cc9999'
+		return 'background:#ffcccc'
 	if time_to_close < 60 * 60 * 2:
 		# yellow for times less than two hours
-		return 'background:#ffcc99'
+		return 'background:#ffffcc'
 	# green otherwise
-	return 'background:#99cc99'
+	return 'background:#ccffcc'
 
 
 def get_close_string(time_to_close):
