@@ -46,7 +46,7 @@ def get_open():
 					'name': name,
 					'open': open_time,
 					'close': close_time
-					})
+				})
 	open = sorted(open, key=lambda x: x['close'])
 	return open
 
@@ -87,7 +87,7 @@ def get_status(location_id):
 					'id': location_id,
 					'is_open': is_open,
 					'time': time.strftime('%H:%M')
-					}
+			}
 
 
 def get_hour_string(hours):
