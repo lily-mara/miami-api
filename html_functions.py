@@ -22,17 +22,16 @@ def get_open_for_html():
 
 	"""
 	return_list = []
-	open_dict = miami_api.get_open()
-	open_list = list(open_dict.items())
+	open_list = miami_api.get_open()
 
 	for location in open_list:
-		to_close = get_time_to_close(location[1][1])
+		to_close = get_time_to_close(location['close'])
 		to_close_string = get_close_string(to_close)
-		close_time = format_time(location[1][1])
+		close_time = format_time(location['close'])
 		style = get_style(to_close)
 
 		return_list.append({
-			'name': location[0],
+			'name': location['name'],
 			'to_close': to_close_string,
 			'close_time': close_time,
 			'style': style

@@ -34,8 +34,13 @@ def get_open():
 		if hours is not None:
 			for start, stop in hours[name]:
 				if inside_time_range(start, stop):
-					open.append([name, (start, stop)])
-	return dict(open)
+					open.append({
+						'name': name,
+						'open': start,
+						'close': stop
+						})
+	open = sorted(open, key=lambda x: x['close'])
+	return open
 
 
 def get_weekday():

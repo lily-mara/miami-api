@@ -44,8 +44,8 @@ class GithubHookHandler(tornado.web.RequestHandler):
 
 
 class MainHandler(tornado.web.RequestHandler):
-	def get(self, filename=None):
-		if filename is None:
+	def get(self, filename='index.html'):
+		if filename is '' or filename == 'index.html':
 			open_list = html_functions.get_open_for_html()
 			self.render('index.html', open_list=open_list)
 			return
