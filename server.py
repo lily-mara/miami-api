@@ -18,15 +18,15 @@ class OpenLocationHandler(tornado.web.RequestHandler):
 		self.write(json_response)
 
 
-class HoursHandler(tornado.web.RequestHandler):
+class StatusHandler(tornado.web.RequestHandler):
 	def get(self, location):
-		response = miami_api.get_hours(location)
+		response = miami_api.get_status(location)
 		json_response = json.dumps(response, indent=4 * ' ')
 		self.set_header('Content-Type', 'application/json')
 		self.write(json_response)
 
 
-class TodayHoursHandler(tornado.web.RequestHandler):
+class TodayStatusHandler(tornado.web.RequestHandler):
 	def get(self):
 		response = miami_api.get_today_hours()
 		json_response = json.dumps(response, indent=4 * ' ')
@@ -58,8 +58,8 @@ class MainHandler(tornado.web.RequestHandler):
 
 handlers = [
 	(r'/api/open', OpenLocationHandler),
-	(r'/api/hours/([a-zA-Z_]+)', HoursHandler),
-	(r'/api/today', TodayHoursHandler),
+	(r'/api/status/([a-zA-Z_]+)', StatusHandler),
+	(r'/api/today', TodayStatusHandler),
 	(r'/api/update', GithubHookHandler),
 	(r'/(.*)', MainHandler),
 	(r'/', MainHandler)

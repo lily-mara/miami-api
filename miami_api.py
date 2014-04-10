@@ -30,7 +30,7 @@ def get_open():
 	open = []
 	hours = []
 	for location in locations:
-		location_time = get_hours(location)
+		location_time = get_status(location)
 		if location_time is not None:
 			hours.append(location_time)
 
@@ -55,7 +55,7 @@ def get_weekday():
 	return weekdays[int(time.strftime('%w'))]
 
 
-def get_hours(location_id):
+def get_status(location_id):
 	"""
 	returns: list of hours for given location on current weekday
 	"""
@@ -95,7 +95,7 @@ def get_today_hours():
 	"""
 	today_hours = []
 	for location in locations:
-		hours = get_hours(location)
+		hours = get_status(location)
 		if hours is not None:
 			today_hours.append(hours)
 	return today_hours
