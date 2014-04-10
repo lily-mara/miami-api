@@ -32,15 +32,16 @@ def get_open():
 	for location in locations:
 		location_time = get_status(location)
 		if location_time is not None:
-			hours.append(location_time)
+			if location_time['is_open']:
+				hours.append(location_time)
 
 	for location in hours:
 		id = location['id']
 		name = location['name']
 		for times in location['hours']:
-			open_time = times['open']
-			close_time = times['close']
-			if location['open']:
+			if times['is_open']:
+				open_time = times['open']
+				close_time = times['close']
 				open.append({
 					'name': name,
 					'open': open_time,
@@ -68,16 +69,21 @@ def get_status(location_id):
 	for i in location['hours']:
 		if today in i:
 			hours = []
-			is_open = False
 			for time in location['hours'][i]:
-				hours.append({'open': time[0], 'close': time[1]})
+				is_open = False
 				if inside_time_range(time[0], time[1]):
 					is_open = True
+				location_dict = {
+						'open': time[0],
+						'close': time[1],
+						'is_open': is_open
+				}
+				hours.append(location_dict)
 			return {
 					'name': location['name'],
 					'hours': hours,
 					'id': location_id,
-					'open': is_open
+					'is_open': is_open
 					}
 
 
