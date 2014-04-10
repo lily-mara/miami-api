@@ -9,12 +9,14 @@ import os
 import miami_api
 import html_functions
 
+
 class OpenLocationHandler(tornado.web.RequestHandler):
 	def get(self):
 		response = miami_api.get_open()
 		json_response = json.dumps(response, indent=4 * ' ')
 		self.set_header('Content-Type', 'application/json')
 		self.write(json_response)
+
 
 class HoursHandler(tornado.web.RequestHandler):
 	def get(self, location):
@@ -23,12 +25,14 @@ class HoursHandler(tornado.web.RequestHandler):
 		self.set_header('Content-Type', 'application/json')
 		self.write(json_response)
 
+
 class TodayHoursHandler(tornado.web.RequestHandler):
 	def get(self):
 		response = miami_api.get_today_hours()
 		json_response = json.dumps(response, indent=4 * ' ')
 		self.set_header('Content-Type', 'application/json')
 		self.write(json_response)
+
 
 class GithubHookHandler(tornado.web.RequestHandler):
 	def post(self):
@@ -37,6 +41,7 @@ class GithubHookHandler(tornado.web.RequestHandler):
 
 	def get(self):
 		self.write('update?')
+
 
 class MainHandler(tornado.web.RequestHandler):
 	def get(self, filename=None):

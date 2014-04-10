@@ -2,6 +2,7 @@ import time
 
 import miami_api
 
+
 def main():
 	print(get_open_for_html())
 
@@ -32,7 +33,7 @@ def get_open_for_html():
 
 		return_list.append({
 			'name': location[0],
-			'to_close' : to_close_string,
+			'to_close': to_close_string,
 			'close_time': close_time,
 			'style': style
 		})
