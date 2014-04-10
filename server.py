@@ -49,6 +49,11 @@ class MainHandler(tornado.web.RequestHandler):
 			open_list = html_functions.get_open_for_html()
 			self.render('index.html', open_list=open_list)
 			return
+		if filename == 'api' or filename == 'api/' or filename == 'api.html':
+			open_list = miami_api.get_open()
+			url = self.request.uri
+			self.render('api.html', open_list = open_list, url = url)
+			return
 		self.render(filename)
 
 handlers = [
@@ -56,7 +61,7 @@ handlers = [
 	(r'/api/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/api/today', TodayHoursHandler),
 	(r'/api/update', GithubHookHandler),
-	(r'/([a-z.A-Z_]+)', MainHandler),
+	(r'/(.*)', MainHandler),
 	(r'/', MainHandler)
 ]
 
