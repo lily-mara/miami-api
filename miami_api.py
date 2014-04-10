@@ -28,17 +28,24 @@ def get_open():
 	returns: list of currently open dining locations
 	"""
 	open = []
+	hours = []
 	for location in locations:
-		hours = get_hours(location)
-		name = locations[location]['name']
-		if hours is not None:
-			for start, stop in hours[name]:
-				if inside_time_range(start, stop):
-					open.append({
-						'name': name,
-						'open': start,
-						'close': stop
-						})
+		location_time = get_hours(location)
+		if location_time is not None:
+			hours.append(location_time)
+
+	for location in hours:
+		id = location['id']
+		name = location['name']
+		for times in location['hours']:
+			open_time = times['open']
+			close_time = times['close']
+			if inside_time_range(open_time, close_time):
+				open.append({
+					'name': name,
+					'open': open_time,
+					'close': close_time
+					})
 	open = sorted(open, key=lambda x: x['close'])
 	return open
 
@@ -48,14 +55,14 @@ def get_weekday():
 	return weekdays[int(time.strftime('%w'))]
 
 
-def get_hours(location):
+def get_hours(location_id):
 	"""
 	returns: list of hours for given location on current weekday
 	"""
 	try:
-		location = locations[location]
+		location = locations[location_id]
 	except KeyError:
-		return {location: 'Not Found'}
+		return None
 	today = get_weekday()
 
 	for i in location['hours']:
@@ -66,7 +73,7 @@ def get_hours(location):
 			return {
 					'name': location['name'],
 					'hours': hours,
-					'id': location
+					'id': location_id
 					}
 
 

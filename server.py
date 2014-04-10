@@ -61,7 +61,7 @@ handlers = [
 	(r'/api/hours/([a-zA-Z_]+)', HoursHandler),
 	(r'/api/today', TodayHoursHandler),
 	(r'/api/update', GithubHookHandler),
-	(r'/(.*)', MainHandler),
+	(r'/api', MainHandler),
 	(r'/', MainHandler)
 ]
 
