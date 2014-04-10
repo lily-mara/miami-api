@@ -70,14 +70,14 @@ def get_status(location_id):
 		if today in i:
 			hours = []
 			is_open = False
-			for time in location['hours'][i]:
+			for time_period in location['hours'][i]:
 				this_time_is_open = False
-				if inside_time_range(time[0], time[1]):
+				if inside_time_range(time_period[0], time_period[1]):
 					this_time_is_open = True
 					is_open = True
 				location_dict = {
-						'open': time[0],
-						'close': time[1],
+						'open': time_period[0],
+						'close': time_period[1],
 						'is_open': is_open
 				}
 				hours.append(location_dict)
@@ -85,7 +85,8 @@ def get_status(location_id):
 					'name': location['name'],
 					'hours': hours,
 					'id': location_id,
-					'is_open': is_open
+					'is_open': is_open,
+					'time': time.strftime('%H:%M')
 					}
 
 
