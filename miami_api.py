@@ -60,8 +60,14 @@ def get_hours(location):
 
 	for i in location['hours']:
 		if today in i:
-			hours = location['hours'][i]
-			return {location['name']: hours}
+			hours = []
+			for time in location['hours'][i]:
+				hours.append({'open': time[0], 'close': time[1]})
+			return {
+					'name': location['name'],
+					'hours': hours,
+					'id': location
+					}
 
 
 def get_hour_string(hours):
