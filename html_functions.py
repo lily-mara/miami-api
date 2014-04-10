@@ -32,7 +32,7 @@ def get_color(time_to_close):
 		return 'background:#cc9999'
 	if time_to_close < 60 * 60 * 2:
 		return 'background:#ffcc99'
-	return ''
+	return 'background:#99cc99'
 
 def rgb_to_hex(rgb):
 	return '#%02x%02x%02x' % rgb
