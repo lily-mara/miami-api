@@ -1,6 +1,6 @@
-import miami_api
 import time
 
+import miami_api
 
 def main():
 	print(get_open_html())
