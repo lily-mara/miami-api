@@ -40,7 +40,7 @@ def get_open():
 		for times in location['hours']:
 			open_time = times['open']
 			close_time = times['close']
-			if inside_time_range(open_time, close_time):
+			if location['open']:
 				open.append({
 					'name': name,
 					'open': open_time,
@@ -68,12 +68,16 @@ def get_hours(location_id):
 	for i in location['hours']:
 		if today in i:
 			hours = []
+			is_open = False
 			for time in location['hours'][i]:
 				hours.append({'open': time[0], 'close': time[1]})
+				if inside_time_range(time[0], time[1]):
+					is_open = True
 			return {
 					'name': location['name'],
 					'hours': hours,
-					'id': location_id
+					'id': location_id,
+					'open': is_open
 					}
 
 
@@ -89,11 +93,11 @@ def get_today_hours():
 	"""
 	returns: hours of every open dining location on current weekday
 	"""
-	today_hours = {}
+	today_hours = []
 	for location in locations:
 		hours = get_hours(location)
 		if hours is not None:
-			today_hours.update(hours)
+			today_hours.append(hours)
 	return today_hours
 
 
