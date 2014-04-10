@@ -6,7 +6,7 @@ def main():
 	print(get_open_html())
 
 
-def get_open_html():
+def get_open_for_html():
 	return_list = []
 	open_dict = miami_api.get_open()
 	open_list = list(open_dict.items())
@@ -22,7 +22,7 @@ def get_open_html():
 			'to_close' : to_close_string,
 			'close_time': close_time,
 			'color': color
-			})
+		})
 
 	return return_list
 
