@@ -78,7 +78,7 @@ def get_status(location_id):
 				location_dict = {
 						'open': time_period[0],
 						'close': time_period[1],
-						'is_open': is_open
+						'is_open': this_time_is_open
 				}
 				hours.append(location_dict)
 			return {
