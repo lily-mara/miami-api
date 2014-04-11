@@ -108,7 +108,7 @@
 	"hawks_nest":
 	{
 		"name": "Hawk's Nest",
-		"location": "UNKNOWN",
+		"location": "Scoreboard Market",
 		"hours": {
 			"m,t,w,h,u": [[1200, 2200]]
 		}
@@ -285,7 +285,7 @@
 	"scoreboard":
 	{
 		"name": "The Scoreboard Market",
-		"location": "UNKNOWN",
+		"location": "Martin Hall",
 		"hours": {
 			"m,t,w,h,f,s,u": [[1000, 2200]]
 		}
