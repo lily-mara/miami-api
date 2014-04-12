@@ -36,7 +36,6 @@ def get_open():
 				hours.append(location_time)
 
 	for location in hours:
-		id = location['id']
 		name = location['name']
 		for times in location['hours']:
 			if times['is_open']:
