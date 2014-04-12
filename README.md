@@ -19,3 +19,5 @@ get_open()
 get_today_hours()
 
 ```
+
+documentation is hosted on [ReadTheDocs](http://miami-api.rtfd.org)
