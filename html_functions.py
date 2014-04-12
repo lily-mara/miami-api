@@ -3,10 +3,6 @@ import time
 import miami_api
 
 
-def main():
-	print(get_open_for_html())
-
-
 def get_open_for_html():
 	"""
 	Returns list of dicts holding information to be used by the dynamic
@@ -90,7 +86,3 @@ def format_time(to_format):
 	"""
 	in_time = time.strptime(str(to_format), '%H%M')
 	return time.strftime('%I:%M %p', in_time)
-
-
-if __name__ == '__main__':
-	main()
