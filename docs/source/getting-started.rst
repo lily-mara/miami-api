@@ -27,8 +27,8 @@ When you first download the repo, there are four python files included:
   not do anything if run.
 
 
-API Calls
-^^^^^^^^^
+Python API
+^^^^^^^^^^
 
 There are three main API calls that this provides:
 
@@ -38,3 +38,19 @@ There are three main API calls that this provides:
    get_open
    get_today_hours
    get_status
+
+RESTful API
+^^^^^^^^^^^
+
+Running the ``server.py`` file will start an instance of the Tornado web
+server. It will host a dynamic web page, and will also return JSON data for
+calls to the above functions. The address for each of these services is:
+
+- ``[server_address]:5000`` for the dynamic homepage
+
+- ``[server_address]:5000/api/open`` for a call to the ``get_open()`` function
+
+- ``[server_address]:5000/api/status/[location]`` for a call to the
+  ``get_status()`` function with ``[location]`` as the argument
+
+- ``[server_address]:5000/api/today`` for a call to the ``get_today_hours()`` function
