@@ -27,8 +27,8 @@ When you first download the repo, there are four python files included:
   not do anything if run.
 
 
-API Calls:
-^^^^^^^^^^
+API Calls
+^^^^^^^^^
 
 There are three main API calls that this provides:
 
