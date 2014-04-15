@@ -36,7 +36,6 @@ def get_open():
 				hours.append(location_time)
 
 	for location in hours:
-		id = location['id']
 		name = location['name']
 		for times in location['hours']:
 			if times['is_open']:
@@ -46,7 +45,7 @@ def get_open():
 					'name': name,
 					'open': open_time,
 					'close': close_time
-					})
+				})
 	open = sorted(open, key=lambda x: x['close'])
 	return open
 
@@ -69,22 +68,25 @@ def get_status(location_id):
 	for i in location['hours']:
 		if today in i:
 			hours = []
-			for time in location['hours'][i]:
-				is_open = False
-				if inside_time_range(time[0], time[1]):
+			is_open = False
+			for time_period in location['hours'][i]:
+				this_time_is_open = False
+				if inside_time_range(time_period[0], time_period[1]):
+					this_time_is_open = True
 					is_open = True
 				location_dict = {
-						'open': time[0],
-						'close': time[1],
-						'is_open': is_open
+						'open': time_period[0],
+						'close': time_period[1],
+						'is_open': this_time_is_open
 				}
 				hours.append(location_dict)
 			return {
 					'name': location['name'],
 					'hours': hours,
 					'id': location_id,
-					'is_open': is_open
-					}
+					'is_open': is_open,
+					'time': time.strftime('%H:%M')
+			}
 
 
 def get_hour_string(hours):
