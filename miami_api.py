@@ -1,9 +1,32 @@
 #!/usr/bin/env python3
 import json
 import time
+import requests
+from bs4 import BeautifulSoup
+import re
 
 locations = None
 
+
+def get_person_info(name):
+	options = {'query_type': 'simple',
+		'query_operator': 'equals',
+		'query_filter_type': 'people',
+		'query_string': name,
+		'run_query': 'Search'
+	}
+	url = 'http://community.miamioh.edu/phpapps/directory/'
+
+	info_page = requests.get(url, params=options).text
+
+	soup = BeautifulSoup(info_page)
+
+
+	info = {
+			'name': soup('p', {'class': 'result_list_entry_name'})[0].string
+	}
+	
+	return info
 
 def inside_time_range(start, stop):
 	"""
