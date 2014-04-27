@@ -38,6 +38,7 @@ There are three main API calls that this provides:
    get_open
    get_today_hours
    get_status
+   get_person_info
 
 RESTful API
 ^^^^^^^^^^^
@@ -53,4 +54,8 @@ calls to the above functions. The address for each of these services is:
 - ``[server_address]:5000/api/status/[location]`` for a call to the
   ``get_status()`` function with ``[location]`` as the argument
 
-- ``[server_address]:5000/api/today`` for a call to the ``get_today_hours()`` function
+- ``[server_address]:5000/api/today`` for a call to the ``get_today_hours()``
+  function
+
+- ``[server_address]:5000/api/person/[name]`` for a call to the
+  ``get_person_info()`` function with ``[name]`` as the argument
