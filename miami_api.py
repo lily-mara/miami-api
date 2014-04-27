@@ -20,13 +20,19 @@ def get_person_info(name):
 	info_page = requests.get(url, params=options).text
 
 	soup = BeautifulSoup(info_page)
-
+	
+	id_search = re.search('([a-zA-Z]*) at miamioh dot edu', info_page)
+	id = id_search.group(1)
+	email = id + '@miamioh.edu'
 
 	info = {
-			'name': soup('p', {'class': 'result_list_entry_name'})[0].string
+			'name': soup('p', {'class': 'result_list_entry_name'})[0].string,
+			'id': id,
+			'email': email
 	}
 	
 	return info
+
 
 def inside_time_range(start, stop):
 	"""
