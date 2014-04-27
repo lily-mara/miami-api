@@ -1,8 +1,9 @@
-Miami API
-=========
+MODIS
+=====
 
-This is (going to be) a simple RESTful API written in Python that provides
-information about Miami University.
+![Miami Open Data/Information System](static/modis.png)
+
+Collection of APIs for Miami University.
 
 Currently, there are only a few useful functions.
 
