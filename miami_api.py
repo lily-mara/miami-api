@@ -24,12 +24,12 @@ def get_person_info(name):
 	info_page = requests.get(url, params=options).text
 
 	soup = BeautifulSoup(info_page)
-	
+
 	try:
 		id_search = re.search('([a-zA-Z0-9]*) at miamioh dot edu', info_page)
 		id = id_search.group(1)
 	except AttributeError:
-		return {'error': 'No person found with that name'}
+		return {'error': 'No person found with that name', 'name': name}
 
 	email = id + '@miamioh.edu'
 
@@ -38,7 +38,7 @@ def get_person_info(name):
 			'id': id,
 			'email': email
 	}
-	
+
 	return info
 
 
