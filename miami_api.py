@@ -9,6 +9,8 @@ locations = None
 
 
 def get_person_info(name):
+	name = name.replace('_', '+')
+
 	options = {'query_type': 'simple',
 		'query_operator': 'equals',
 		'query_filter_type': 'people',
@@ -21,8 +23,12 @@ def get_person_info(name):
 
 	soup = BeautifulSoup(info_page)
 	
-	id_search = re.search('([a-zA-Z]*) at miamioh dot edu', info_page)
-	id = id_search.group(1)
+	try:
+		id_search = re.search('([a-zA-Z]*) at miamioh dot edu', info_page)
+		id = id_search.group(1)
+	except AttributeError:
+		return {'error': 'No person found with that name'}
+
 	email = id + '@miamioh.edu'
 
 	info = {
