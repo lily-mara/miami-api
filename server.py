@@ -26,6 +26,14 @@ class StatusHandler(tornado.web.RequestHandler):
 		self.write(json_response)
 
 
+class PersonInfoHandler(tornado.web.RequestHandler):
+	def get(self, name):
+		response = miami_api.get_person_info(name)
+		json_response = json.dumps(response, indent=4 * ' ')
+		self.set_header('Content-Type', 'application/json')
+		self.write(json_response)
+
+
 class TodayStatusHandler(tornado.web.RequestHandler):
 	def get(self):
 		response = miami_api.get_today_hours()
@@ -61,6 +69,7 @@ handlers = [
 	(r'/api/status/([a-zA-Z_]+)', StatusHandler),
 	(r'/api/today', TodayStatusHandler),
 	(r'/api/update', GithubHookHandler),
+	(r'/api/person/([a-zA-Z_+]+)', PersonInfoHandler),
 	(r'/(.*)', MainHandler),
 	(r'/', MainHandler)
 ]
