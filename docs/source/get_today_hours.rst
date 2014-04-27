@@ -8,7 +8,9 @@ For example:
 
 .. code-block:: python
 
-   [
+    >>> from miami_api import *
+    >>> get_open()
+    [
     {
         "is_open": false,
         "time": "00:42",
@@ -46,6 +48,6 @@ For example:
         "id": "alexander"
     },
 
-   ...
+    ...
 
-   ]
+    ]

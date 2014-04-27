@@ -6,7 +6,9 @@ about the given location. For example:
 
 .. code-block:: python
 
-   {
+    >>> from miami_api import *
+    >>> get_status('tower_to_go')
+    {
     "is_open": false,
     "time": "00:46",
     "name": "Tower To Go",

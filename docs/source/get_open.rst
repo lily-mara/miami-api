@@ -7,7 +7,9 @@ example:
 
 .. code-block:: python
 
-   [
+    >>> from miami_api import *
+    >>> get_open()
+    [
        {
            "close": 1600,
            "open": 900,
@@ -33,4 +35,4 @@ example:
            "open": 0,
            "name": "Pulley Diner"
        }
-   ]
+    ]
