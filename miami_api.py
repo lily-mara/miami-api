@@ -4,6 +4,7 @@ import time
 import requests
 from bs4 import BeautifulSoup
 import re
+import os
 
 locations = None
 
@@ -55,7 +56,8 @@ def inside_time_range(start, stop):
 
 def get_json_data():
 	global locations
-	with open('locations.json', 'r') as json_file:
+	file_path = os.path.join(os.path.dirname(__file__), 'locations.json')
+	with open(file_path, 'r') as json_file:
 		locations = json.load(json_file)
 
 
