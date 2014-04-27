@@ -10,6 +10,7 @@ locations = None
 
 def get_person_info(name):
 	name = name.replace('_', '+')
+	name = name.replace(' ', '+')
 
 	options = {'query_type': 'simple',
 		'query_operator': 'equals',
