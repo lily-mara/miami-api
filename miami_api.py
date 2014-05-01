@@ -14,7 +14,7 @@ def get_classes(dept, number, campus='O'):
 
 	payload = {
 		'term': '201510',
-		'campus': "	'O' ",
+		'campus': "	'{0}' ".format(campus),
 		'subj': dept,
 		'course_type': '',
 		'course': number,
