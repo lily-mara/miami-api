@@ -19,7 +19,7 @@ class OpenLocationHandler(tornado.web.RequestHandler):
 
 
 class ClassInfoHandler(tornado.web.RequestHandler):
-	def get(self, dept, number, campus='o'):
+	def get(self, dept, number, campus='O'):
 		response = miami_api.get_classes(dept, number, campus)
 		json_response = json.dumps(response, indent=4 * ' ')
 		self.set_header('Content-Type', 'application/json')
