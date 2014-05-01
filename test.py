@@ -8,6 +8,9 @@ def main():
 
 	# returns hours for all dining locations open today
 	get_today_hours()
+	
+	# returns info for all instances of CSE 274
+	get_classes('CSE', '274')
 
 	try:
 		import tornado
@@ -16,6 +19,16 @@ def main():
 		print('Please install it by running')
 		print()
 		print('pip install tornado')
+		print()
+		input('Press ENTER to continue.')
+		
+	try:
+		import requests
+	except ImportError:
+		print('You do not have the required module \'requests\'.')
+		print('Please install it by running')
+		print()
+		print('pip install requests')
 		print()
 		input('Press ENTER to continue.')
 
