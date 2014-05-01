@@ -9,6 +9,76 @@ import os
 locations = None
 
 
+def get_classes(dept, number, campus='O'):
+	url = 'http://www.admin.muohio.edu/cfapps/courselist/selection_display.cfm'
+
+	payload = {
+		'term': '201510',
+		'campus': "	'O' ",
+		'subj': dept,
+		'course_type': '',
+		'course': number,
+		'crn': '',
+		'title': '',
+		'level': '',
+		'begin_time': '',
+		'end_time': '',
+		'monday': 'M',
+		'tuesday': 'T',
+		'wednesday': 'W',
+		'thursday': 'R',
+		'friday': 'F',
+		'saturday': 'S'
+	}
+
+	class_page = requests.post(url, data=payload).text
+	soup = BeautifulSoup(class_page)
+
+	class_soup = soup.findAll('tr', {'class' : re.compile('rowDetail_.*')})
+	classes = []
+
+	for class_section in class_soup:
+		children = [i for i in class_section.children if i != '\n']
+
+		has_class = lambda x, y: y in x['class']
+		get_element = lambda x: str([i.string for i in children if has_class(i, x)][0])
+
+		crn = get_element('colCrn')
+		course = get_element('colCrse').replace('\u00A0', ' ')
+		section = get_element('colSeq').replace(' ', '')
+		title = get_element('colTitle')
+		hours = get_element('colHrs')
+
+		enrollment = get_element('colLim').split('/')
+		enrolled = enrollment[0]
+		max_students = enrollment[1]
+		meet_times = get_element('colMeet').replace(' ', '')
+		meet_days = get_element('colDays')
+		room = get_element('colRoom')
+		instructor = get_element('colInst')
+
+		dates = get_element('colSpMeet')
+
+		class_info = {
+				'crn': crn,
+				'course': course,
+				'section': section,
+				'title': title,
+				'hours': hours,
+				'enrolled': enrolled,
+				'max_students': max_students,
+				'meet_times': meet_times,
+				'meet_days': meet_days,
+				'room': room,
+				'instructor': instructor,
+				'dates': dates
+		}
+
+		classes.append(class_info)
+
+	return classes
+
+
 def get_person_info(name):
 	name = name.replace('_', '+')
 	name = name.replace(' ', '+')
