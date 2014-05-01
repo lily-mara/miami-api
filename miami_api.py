@@ -14,7 +14,7 @@ def get_classes(dept, number, campus='O'):
 
 	payload = {
 		'term': '201510',
-		'campus': "	'{0}' ".format(campus),
+		'campus': "	'O' ",
 		'subj': dept,
 		'course_type': '',
 		'course': number,
@@ -36,12 +36,18 @@ def get_classes(dept, number, campus='O'):
 
 	class_soup = soup.findAll('tr', {'class' : re.compile('rowDetail_.*')})
 	classes = []
+	
+	def safe_get(l, ind, default=None):
+		try:
+			return l[ind]
+		except IndexError:
+			return default
 
 	for class_section in class_soup:
-		children = [i for i in class_section.children if i != '\n']
+		children = [i for i in class_section.children if i != '\n' and i is not None]
 
-		has_class = lambda x, y: y in x['class']
-		get_element = lambda x: str([i.string for i in children if has_class(i, x)][0])
+		has_class = lambda x, y: y in x.get('class', '')
+		get_element = lambda x: safe_get([i.string for i in children if has_class(i, x)], 0, '')
 
 		crn = get_element('colCrn')
 		course = get_element('colCrse').replace('\u00A0', ' ')
@@ -50,8 +56,8 @@ def get_classes(dept, number, campus='O'):
 		hours = get_element('colHrs')
 
 		enrollment = get_element('colLim').split('/')
-		enrolled = enrollment[0]
-		max_students = enrollment[1]
+		enrolled = safe_get(enrollment, 0)
+		max_students = safe_get(enrollment, 0)
 		meet_times = get_element('colMeet').replace(' ', '')
 		meet_days = get_element('colDays')
 		room = get_element('colRoom')
