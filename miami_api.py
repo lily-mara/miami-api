@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import json
 import time
-import requests
-from bs4 import BeautifulSoup
 import re
 import os
+
+from bs4 import BeautifulSoup
+import requests
 
 locations = None
 
