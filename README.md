@@ -1,7 +1,7 @@
 MODIS
 =====
 
-![Miami Open Data/Information System](static/modis.png)
+![Miami Open Data/Information System](static/MODIS.png)
 
 Collection of APIs for Miami University.
 
